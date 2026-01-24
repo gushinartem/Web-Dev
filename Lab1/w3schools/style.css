@@ -1,0 +1,36 @@
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+p {
+  border: 2px solid powderblue;
+  padding: 30px;
+}
+.mycontainer {
+  display: flex;
+}
+.mycontainer > div {
+  width:33%;
+}
+div {
+  width: 30%;
+  display: inline-block;
+}
+.city {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
