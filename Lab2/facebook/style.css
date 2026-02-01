@@ -1,0 +1,118 @@
+*{
+    font-family:"Lucida Console";
+}
+
+body {
+    background-color: #f0f2f5;
+    margin:0px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 60px;
+}
+
+#textFacebook {
+    width: 450px;
+}
+
+#textFacebook h1 {
+    color: #1877f2;
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+
+#textFacebook p {
+    font-size: 24px;
+    
+}
+#formDiv {
+    width: 400px;
+}
+
+#loginBox {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+#loginBox input {
+    height: 50px;
+    margin-bottom: 12px;
+    padding: 0 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+#loginBox input:focus {
+    outline: none;
+    border-color: #1877f2;
+}
+
+#loginInBtn {
+    background: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 48px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#loginInBtn:hover{
+    background-color: blue;
+}
+
+#forgot {
+    text-align: center;
+    font-size: 14px;
+    color: #1877f2;
+    margin-bottom: 15px;
+}
+
+#createBtn {
+    background: #42b72a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: bold;
+    height: 48px;
+}
+
+#createBtn:hover {
+    background: #36a420;
+}
+#pInForm{
+    text-align: center;
+}
+footer{
+    background-color: #d7e3f5;
+    padding:0px;
+    height: 200px;
+    align-items: center;   
+}
+footer div{
+    text-align: center;
+    padding:20px
+}
+footer div p{
+    color:grey;
+}
+footer div p a {
+    text-decoration: none;
+    color:grey;
+}
+footer div p a:hover{
+    text-decoration: underline;
+    text-decoration-color: grey;
+}
