@@ -1,0 +1,102 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+p{
+    margin:0px;
+    padding:0px;
+}
+h1{
+    margin:0px;
+    padding:0px;
+    font-weight: 500;
+    font-size:22px;
+}
+header{
+    background-color: rgb(34, 34, 34);
+    height: 70px;
+    margin:0px;
+    padding:0px;
+    display: flex;
+    align-items: center;
+    color: rgb(132, 136, 135);
+    padding-left:100px;
+}
+
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:70px;
+    padding-left:30%;
+    padding-right:30%;
+}
+#container div{
+    width:100%;
+}
+
+#bodyContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:20px;
+    padding-left:100px;
+}
+#addButton{
+    margin-left:50px;
+    color: rgb(202, 209, 228);
+    background-color: rgb(51, 122, 183);
+    outline:none;
+    border:none;
+    padding:10px;
+    border-radius: 7px;
+    &:hover{
+        background-color: rgb(60, 141, 212);
+        color:rgb(227, 234, 255);
+    }
+}
+#inputField{
+    width:50%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left:10px;
+    border:1px solid rgb(215, 215, 215);
+    &:focus{
+        outline:none;
+        border:1px solid rgb(148, 148, 148);
+    }
+}
+
+.taskCard{
+    border:1px solid rgb(215, 215, 215);
+    border-radius: 5px;
+    display: flex;
+    padding:20px;
+    margin-top:20px;
+}
+.taskCard div{
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.taskCard.removing{
+    transform: scale(1.2);
+    box-shadow:1 1 1 10px rgba(0,0,0,0.2);
+    transition: all 0.5s ease;
+}
+.deletionDiv{
+    justify-content: right;
+}
+.checkAndTextDiv p{
+    margin-left:40px;
+}
+.deletionButton{
+    background-color: transparent;
+    border:none;
+    outline:none;
+}
+.deletionButton:hover img{
+    filter: contrast(40%);
+}
