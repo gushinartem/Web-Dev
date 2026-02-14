@@ -82,7 +82,8 @@ header{
     transition: all 0.5s ease;
 }
 .taskCard.removing{
-    transform: scale(1.2);
+    transform: scale(2);
+    background-color:red;
     box-shadow:1 1 1 10px rgba(0,0,0,0.2);
     transition: all 0.5s ease;
 }
