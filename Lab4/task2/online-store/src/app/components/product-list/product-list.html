@@ -1,0 +1,24 @@
+<div id="container">
+    <div class="card" *ngFor="let item of products; let i = index">
+        <div class="cardImage">
+            <a href="{{item.link}}"><img src="{{item.image}}" width="150px" height="150px"></a>
+        </div>
+        <hr>
+        <div class="cardInfo">
+            <a href="{{item.link}}"><p class="pName">{{item.name}}</p></a>
+            <p class="pDescription">{{item.description}}</p>
+            <div class="cardBottom">
+                <div class="ratingCard">
+                    <span *ngFor="let i of [].constructor(5); let index = index">
+                    <img src="{{ index < round(item.rating) ? 'assets/goldStar.png' : 'assets/emptyStar.png' }}" width="10px" height="10px">
+                    </span>
+                    <p class="pFullRating" *ngIf="item.rating >= 4.5">Люди рекомендуют!</p>
+                </div>
+                <div>
+                    <p style="font-weight: 500;margin-top:5px">Цена : {{ item.price | number:'1.0-0' }} ₸</p>
+                    <a href="{{getTelegramLink(item)}}"><img class="shareIcon" src="assets/share.png" width="20px" height="20px"></a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
