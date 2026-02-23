@@ -1,0 +1,10 @@
+<div id="welcomeInfo">
+    <p>Welcome! Choose category</p>
+</div>
+
+<div id="container">
+    <app-category-card
+    *ngFor="let category of categories; trackBy: trackById"
+    [cat]="category"
+    ></app-category-card>
+</div>

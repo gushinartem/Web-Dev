@@ -1,0 +1,94 @@
+
+p{
+    margin:0px;
+    padding:0px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 420px;
+    border:1px solid rgb(229, 229, 229);
+    padding:10px;
+}
+.card hr{
+    margin-top:20px;
+    border:1px solid rgb(229,229,229);
+    width:100%;
+}
+.card a{
+    display: block;
+    text-decoration: none;
+    color:rgb(8, 141, 208);
+}
+.card a:hover{
+    text-decoration: underline;
+}
+.cardImage img{
+    object-fit: contain;
+    margin-top:20px;
+}
+.cardImage{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.cardInfo{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.pDescription{
+    font-size:12px;
+    margin-top:3px;
+    color:rgb(99, 99, 99);
+}
+.shareIcon{
+    margin-top:15px;
+    transition: filter 0.5s ease;
+    &:hover{
+        cursor: pointer;
+        filter:opacity(0.5);
+    }
+}
+.ratingCard{
+    display: flex;
+    align-items: center;
+}
+.pFullRating{
+    font-size:13px;
+    color:green;
+    margin-left:20px;
+}
+.cardBottom{
+    margin-top:auto;
+}
+.ratingCard{
+    margin-top:auto;
+}
+.veryBottomCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.veryBottomCard button{
+    margin-top:10px;
+}
+.likeBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    outline:none;
+    border:none;
+    transition: all 0.5s ease;
+}
+.likeBtn:hover img{
+    filter:
+    invert(15%) sepia(100%) saturate(7000%) hue-rotate(0deg);
+}
+.likeBtn.active img{
+    filter:
+    invert(15%) sepia(100%) saturate(7000%) hue-rotate(0deg);
+}
