@@ -1,0 +1,19 @@
+.photo-card {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-text {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px;
+}
+
+.photo-card:hover .hover-text {
+  display: block;
+}

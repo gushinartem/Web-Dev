@@ -1,0 +1,11 @@
+<div *ngIf = "albumOb | async as album">
+    <p>ID:{{album.id}}</p>
+    <p>Title: {{album.title}}</p>
+    <p>UserId: {{album.userId}}</p>
+    <a [routerLink]="['/albums', album.id, 'photos']">View Photos</a>
+    <div>
+        <input #myInput value="{{album.title}}">
+        <button (click)="updateAlbum(myInput.value)">Save</button>
+    </div>
+    <button><a [routerLink]="['/albums']">Back To Albums</a></button>
+</div>

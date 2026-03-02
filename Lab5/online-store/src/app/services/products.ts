@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product.model';
+import { UntypedFormBuilder } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root',
@@ -17,6 +18,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/chehol-dlja-apple-iphone-13-prozrachnyi-106185651/?c=750000000",
       likes:10,
+      isDel:false
     },
     {
       id:2,
@@ -29,6 +31,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/kabel-varium-usb-4-type-c-m-1-m-vtt03-belyi-144182006/?c=750000000",
       likes:2,
+      isDel:false
     },
     {
       id:3,
@@ -41,6 +44,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/apple-watch-magnetic-charger-cable-usb-c-1-m-102654841/?c=750000000",
       likes:20,
+      isDel:false
     },
     {
       id:4,
@@ -53,6 +57,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/apple-20w-usb-c-power-adapter-belyi-100984093/?c=750000000",
       likes:1,
+      isDel:false
     },
     {
       id:5,
@@ -65,6 +70,7 @@ export class ProductService {
       images:[],
       link:"http://kaspi.kz/shop/p/apple-iphone-16-128gb-chernyi-123713453/?c=750000000",
       likes:14,
+      isDel:false
     },
     {
       id:6,
@@ -77,6 +83,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/vneshnii-akkumuljator-xiaomi-redmi-power-bank-20000-mach-18-vt-chernyi-100322086/?c=750000000",
       likes:5,
+      isDel:false
     },
     {
       id:7,
@@ -89,6 +96,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/yami-i1-42-mm-zolotistyi-zolotistyi-112674629/?c=750000000",
       likes:9,
+      isDel:false
     },
     {
       id:8,
@@ -101,6 +109,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/magnitnyi-derzhatel-007-chernyi-135834964/?c=750000000",
       likes:17,
+      isDel:false
     },
     {
       id:9,
@@ -113,6 +122,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/samsung-galaxy-a56-5g-8-gb-256-gb-seryi-136420155/?c=750000000",
       likes:18,
+      isDel:false
     },
     {
       id:10,
@@ -125,6 +135,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/prozrachnyi-chernyi-120588192/?c=750000000",
       likes:50,
+      isDel:false
     },
     {
       id:11,
@@ -137,6 +148,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/isabekov-d-gau-ar-tas-106028074/?c=750000000",
       likes:33,
+      isDel:false
     },
     {
       id:12,
@@ -149,6 +161,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/klir-d-atomnye-privychki-117680550/?c=750000000",
       likes:10,
+      isDel:false
     },
     {
       id:13,
@@ -161,6 +174,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/nalogovyi-kodeks-2026-145848714/?c=750000000",
       likes:3,
+      isDel:false
     },
     {
       id:14,
@@ -173,6 +187,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/petrov-g-m-ns-z-m-al-m-112806541/?c=750000000",
       likes:7,
+      isDel:false
     },
     {
       id:15,
@@ -185,6 +200,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/keho-d-podsoznanie-mozhet-vse--26011775/?c=750000000",
       likes:26,
+      isDel:false
     },
     {
       id:16,
@@ -197,6 +213,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/apple-iphone-17-pro-max-256gb-oranzhevyi-145468241/?c=750000000",
       likes:25,
+      isDel:false
     },
     {
       id:17,
@@ -209,6 +226,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/redmi-a3x-3-gb-64-gb-chernyi-121654928/?c=750000000",
       likes:11,
+      isDel:false
     },
     {
       id:18,
@@ -221,6 +239,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/meizu-mblu-21-6-gb-128-gb-belyi-131075977/?c=750000000",
       likes:49,
+      isDel:false
     },
     {
       id:19,
@@ -233,6 +252,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/vneshnii-akkumuljator-a-case-ac-pb001-wh-10000-mach-belyi-131484018/?c=750000000",
       likes:43,
+      isDel:false
     },
     {
       id:20,
@@ -245,6 +265,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/vneshnii-akkumuljator-gerlax-gerlax-p118p-10000-mach-22-5-vt-chernyi-139491989/?c=750000000",
       likes:21,
+      isDel:false
     },
     {
       id:21,
@@ -257,6 +278,7 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/vneshnii-akkumuljator-samsung-eb-p5300-20000-mach-chernyi-118443771/?c=750000000",
       likes:120,
+      isDel:false
     },
     {
       id:22,
@@ -269,9 +291,16 @@ export class ProductService {
       images:[],
       link:"https://kaspi.kz/shop/p/vneshnii-akkumuljator-virma-spb10k-10000-mach-22-5-vt-seryi-141360537/?c=750000000",
       likes:99,
+      isDel:false
     },
   ];
   getProductsByCatId(id: number) : Product[]{
-    return this.allProducts.filter(p => p.category == id);
+    return this.allProducts.filter(p => p.category == id && p.isDel != true);
+  }
+  delCard(id: number){
+    const pr = this.allProducts.find(p => p.id == id);
+    if(pr){
+      pr.isDel = true;
+    }
   }
 }

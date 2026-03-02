@@ -28,6 +28,7 @@ export class ProductList {
     if(confirm("Вы действительно хотите удалить эту карточку ?") != true){
       return;
     }
+    this.productService.delCard(id);
     this.products = this.products.filter(p => p.id != id);
     if(this.products.length <= 0){
       this.isEmpty = true;

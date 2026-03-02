@@ -84,6 +84,9 @@ p{
     border:none;
     transition: all 0.5s ease;
 }
+.likeBtn p{
+    margin-left:5px;
+}
 .likeBtn:hover img{
     filter:
     invert(15%) sepia(100%) saturate(7000%) hue-rotate(0deg);

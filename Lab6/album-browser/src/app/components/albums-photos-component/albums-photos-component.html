@@ -1,0 +1,14 @@
+<ng-template #loading>
+    <div id="loadingDiv">
+        <p>Loading photos...</p>
+    </div>
+</ng-template>
+
+<ng-container *ngIf="photos | async as photos; else loading">
+    <div id="container">
+        <div *ngFor="let photo of photos; trackBy: trackById" >
+            <app-photo-card [photo] = "photo"></app-photo-card>
+        </div>
+    </div>
+    <a [routerLink]="['/albums' , albumId]">Back</a>
+</ng-container>

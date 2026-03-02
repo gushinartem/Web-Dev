@@ -1,0 +1,7 @@
+<div id ='card' >
+    <div [routerLink]="['/albums', album()?.id]" id=cardInfo>
+        <p>ID: {{album()?.id}}</p>
+        <p>{{album()?.title}}</p>
+    </div>
+    <button (click) = "removeAlbum()">Delete</button>
+</div>

@@ -1,0 +1,17 @@
+<ng-template #loading>
+    <div id="loadingDiv">
+        <p>Loading albums...</p>
+    </div>
+</ng-template>
+
+<ng-container *ngIf="albums | async as albums; else loading">
+    <div id="container">
+        <app-album-card
+            *ngFor="let album of albums; trackBy: trackById"
+            [album]="album"
+            (delAlbum)="removeAlbum($event)">
+        </app-album-card>
+    </div>
+</ng-container>
+
+
