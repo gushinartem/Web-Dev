@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Album } from '../models/album.model';
 import { Photo } from '../models/photo.model';
-import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs';
 @Injectable({
   providedIn: 'root',
@@ -25,7 +24,7 @@ export class AlbumService {
     map(albums => albums.find(a => a.id === id)!));
   }
   updateAlbum(id: number , title: String){
-    this.http.put(`${this.baseUrl}/albums/${id}`, { title }).subscribe();
+    this.http.put(`${this.baseUrl}/albums/${id}`, { title });
     this.albums = this.albums.pipe(
     map(albums =>
       albums.map(a =>

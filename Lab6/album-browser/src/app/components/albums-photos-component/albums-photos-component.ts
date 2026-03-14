@@ -11,12 +11,11 @@ import { PhotoCard } from '../photo-card/photo-card';
   styleUrl: './albums-photos-component.css',
 })
 export class AlbumsPhotosComponent {
-  hovered: number | null = null;
   albServe = inject(AlbumService);
   route = inject(ActivatedRoute);
   albumId= Number(this.route.snapshot.paramMap.get('id'));
   photos = this.albServe.getAlbumPhoto(this.albumId);
   trackById(index: number, photo: Photo): number {
       return photo.id;
-    }
+  }
 }

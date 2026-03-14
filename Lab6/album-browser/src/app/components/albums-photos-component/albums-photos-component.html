@@ -6,9 +6,9 @@
 
 <ng-container *ngIf="photos | async as photos; else loading">
     <div id="container">
-        <div *ngFor="let photo of photos; trackBy: trackById" >
-            <app-photo-card [photo] = "photo"></app-photo-card>
-        </div>
+        <app-photo-card 
+        *ngFor = "let photo of photos; trackBy: trackById" [photo] = photo
+        ></app-photo-card>
     </div>
     <a [routerLink]="['/albums' , albumId]">Back</a>
 </ng-container>
