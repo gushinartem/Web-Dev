@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="cardImage">
+        <a [routerLink]="['/category', cat().id]"><img src="{{cat().image}}" width="150px" height="150px"></a>
+    </div>
+    <div class="cardInfo">
+        <a href="category/{{cat().id}}"><p class="pName">{{cat().category}}</p></a>
+    </div>
+</div>

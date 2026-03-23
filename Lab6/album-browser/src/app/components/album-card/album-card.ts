@@ -14,6 +14,5 @@ export class AlbumCard {
 
   removeAlbum(){
     this.delAlbum.emit(this.album()?.id!);
-
   }
 }

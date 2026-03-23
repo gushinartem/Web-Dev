@@ -1,0 +1,14 @@
+<div id="catTitle">
+    <p>{{cat?.category}}</p>
+</div>
+@if(isEmpty == true){
+    <div  id="isEmptyDiv">
+        <p>This category doesn't have any items!</p>
+    </div>
+}
+<div id="container">
+    <app-product-card
+     *ngFor="let product of products; trackBy: trackById" [product]="product"
+     (remove) = "removeProduct($event)"
+     ></app-product-card>
+</div>
